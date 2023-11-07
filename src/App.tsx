@@ -1,7 +1,9 @@
+import PasswordApp from "./PassworGenerator/App";
+
 function App() {
   return (
     <>
-      <h1>Hello World!</h1>
+      <PasswordApp />
     </>
   );
 }
