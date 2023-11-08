@@ -55,7 +55,7 @@ const LOWERCASE_LETTERS = [
   "z",
 ];
 
-const NUMBERS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const NUMBERS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 const SYMBOLS = [
   "!",
@@ -96,22 +96,22 @@ const generatePassword = (
   numbers: boolean,
   symbols: boolean
 ) => {
-  console.log("Generate Password: ");
-  console.log("LENGTH: ", length);
-  console.log("CAPITAL LETTERS: ", capLet);
-  console.log("NUMBERS: ", numbers);
-  console.log("SYMBOLS: ", symbols);
+  let password_combinations = LOWERCASE_LETTERS;
+  if (capLet)
+    password_combinations = [...password_combinations, ...CAPITAL_LETTERS];
 
-  /*
-        La lógica, tendremos un array con cada condicion, es decir:
-        -> Por defecto uno con letras minusculas ["a","b"...]
-        -> Con mayúsculas ["A", "B"..]
-        -> Con números [1,2,...]
-        -> Con symbolos ["@", "?", ...]
-        y añadirlos dependiendo o no si quiere la condicion a un array global con todos ["a","B",8,"@"]
-        Ir generando numeros aleatorios y obteniendolos del array dependiendo de la longitud 
+  if (numbers) password_combinations = [...password_combinations, ...NUMBERS];
 
-    */
-  return "";
+  if (symbols) password_combinations = [...password_combinations, ...SYMBOLS];
+
+  let password_generated = "";
+  while (password_generated.length !== length) {
+    const randomNumber = Math.floor(
+      Math.random() * password_combinations.length
+    );
+    password_generated += password_combinations[randomNumber];
+  }
+  console.log(password_generated);
+  return password_generated;
 };
 export default generatePassword;

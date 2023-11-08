@@ -2,7 +2,7 @@ import generatePassword from "./Functions/generatePassword";
 
 const PasswordApp = () => {
   const handleClick = () => {
-    generatePassword(8, true, true, true);
+    generatePassword(10, true, true, false);
   };
   return (
     <>
