@@ -111,7 +111,6 @@ const generatePassword = (
     );
     password_generated += password_combinations[randomNumber];
   }
-  console.log(password_generated);
   return password_generated;
 };
 export default generatePassword;
