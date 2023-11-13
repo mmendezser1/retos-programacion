@@ -1,11 +1,13 @@
-import PasswordApp from "./PassworGenerator/App";
+// import PasswordApp from "./PassworGenerator/App";
+import TechnicalTest1 from "./TechnicalTest/App";
 
-function App() {
+const App = () => {
   return (
     <>
-      <PasswordApp />
+      {/* <PasswordApp /> */}
+      <TechnicalTest1 />
     </>
   );
-}
+};
 
 export default App;
