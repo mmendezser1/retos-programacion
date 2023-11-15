@@ -7,15 +7,16 @@ const api = {
       method: "GET",
     });
     const res = await response.json();
-    // console.log(res);
+
     return res;
   },
   getImage: async (word: string) => {
+    // return 1;
+    console.log(URL_API_IMAGES + word);
     const response = await fetch(URL_API_IMAGES + word, {
       method: "GET",
     });
     const res = await response;
-
     return res;
   },
 };

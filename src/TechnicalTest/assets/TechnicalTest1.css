@@ -1,0 +1,48 @@
+.technical-test-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+body {
+  background-color: gray;
+}
+
+.technical-test-article {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  width: 40vw;
+}
+.fact-container {
+  margin-bottom: 20px;
+}
+
+.image-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.custom-button {
+  background-color: #4caf50; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  padding: 15px 30px; /* Relleno del botón */
+  font-size: 16px; /* Tamaño de fuente del botón */
+  border: none; /* Eliminar el borde del botón */
+  border-radius: 8px; /* Radio de borde para esquinas redondeadas */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+
+  /* Estilos para el hover */
+  &:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el ratón por encima */
+  }
+
+  /* Estilos para el clic */
+  &:active {
+    background-color: #367939; /* Cambia el color de fondo cuando se hace clic */
+  }
+}
